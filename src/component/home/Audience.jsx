@@ -59,18 +59,26 @@ const IconSprout = () => (
   </svg>
 )
 
+const IconMap = () => (
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+    <line x1="9" x2="9" y1="3" y2="18" />
+    <line x1="15" x2="15" y1="6" y2="21" />
+  </svg>
+)
+
 const audience = [
   {
-    Icon: IconTractor,
+    Icon: IconMap,
     accentColor: '#F59E0B',
     accentBg: 'rgba(245, 158, 11, 0.15)',
     accentBorder: 'rgba(245, 158, 11, 0.35)',
     glow: 'rgba(245, 158, 11, 0.3)',
-    title: 'Blue Collar Workers Who Own Land',
+    title: 'Land Owners',
     desc: "Protect the land you've earned with the right trust structure for your family.",
   },
   {
-    Icon: IconWheat,
+    Icon: IconTractor,
     accentColor: '#10B981',
     accentBg: 'rgba(16, 185, 129, 0.15)',
     accentBorder: 'rgba(16, 185, 129, 0.35)',

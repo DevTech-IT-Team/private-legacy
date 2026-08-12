@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/privatelogo.png'
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -21,16 +21,25 @@ function Header() {
 
   const handleNav = (href) => {
     setMenuOpen(false)
+    if (window.location.pathname !== '/') {
+      window.location.href = '/' + href;
+      return;
+    }
     const el = document.querySelector(href)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <header className={`topbar${scrolled ? ' scrolled' : ''}`}>
-      <a className="brand" href="#home" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
-        <img className="brand-logo" src={logo} alt="Private Legacy logo" />
+      <a className="brand" href="/" onClick={(e) => { 
+        if (window.location.pathname === '/') {
+          e.preventDefault(); 
+          window.scrollTo({ top: 0, behavior: 'smooth' }) 
+        }
+      }}>
+        <img className="brand-logo" src={logo} alt="Legacy Trust Services logo" />
         <div className="brand-text">
-          <strong>Private Legacy</strong>
+          <strong>Legacy Trust Services</strong>
           <span>Passing wealth to the next generation</span>
         </div>
       </a>

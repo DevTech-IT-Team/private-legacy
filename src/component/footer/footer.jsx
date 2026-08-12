@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.png'
+import logo from '../../assets/treelogo.png'
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -24,8 +24,8 @@ function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div className="footer-brand">
-            <img className="brand-logo" src={logo} alt="Private Legacy logo" />
-            <strong>Private Legacy</strong>
+            <img className="brand-logo" src={logo} alt="Legacy Trust Services logo" />
+            <strong>Legacy Trust Services</strong>
             <p>
               Educating families about private trusts to protect assets and facilitate the trust creation process. Mentoring to develop a vision for their legacy as a family.
             </p>
@@ -106,8 +106,12 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Private Legacy / Legacy Trust Services. All rights reserved.</p>
-          <p className="footer-disclaimer">
+          <p>&copy; {currentYear} Legacy Trust Services. All rights reserved.</p>
+          <div style={{ display: 'flex', gap: '20px', marginTop: '10px', justifyContent: 'center' }}>
+            <a href="/privacy-policy" style={{ color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none', fontSize: '0.85rem' }}>Privacy Policy</a>
+            <a href="/terms" style={{ color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none', fontSize: '0.85rem' }}>Terms & Conditions</a>
+          </div>
+          <p className="footer-disclaimer" style={{ marginTop: '10px' }}>
             For educational purposes only. Not legal advice.
           </p>
         </div>
