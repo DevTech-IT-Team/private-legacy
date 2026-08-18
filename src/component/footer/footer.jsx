@@ -1,4 +1,4 @@
-import logo from '../../assets/treelogo.png'
+import logo from '../../assets/LTS.Logo.png'
 
 const navLinks = [
   { label: 'About', href: '#about' },
